@@ -22,7 +22,7 @@ npm run lerna bootstrap
 
 | Library | Vulnerabilities |
 |----|----|
-|[styles/theme](/styles/theme)|[![Known Vulnerabilities](https://snyk.io/test/github/friends-with-sitters/packages/badge.svg?targetFile=styles/theme/package.json)](https://snyk.io/test/github/friends-with-sitters/packages?targetFile=package.json) |
+|[styles/theme](/styles/theme)|[![Known Vulnerabilities](https://snyk.io/test/github/friends-with-sitters/packages/badge.svg?targetFile=styles/theme/package.json)](https://snyk.io/test/github/friends-with-sitters/packages?targetFile=package.json) [![Greenkeeper badge](https://badges.greenkeeper.io/friends-with-sitters/packages.svg)](https://greenkeeper.io/) |
 
 ---
 
