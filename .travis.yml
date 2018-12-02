@@ -1,0 +1,45 @@
+language: node_js
+
+node_js:
+  - node
+  - lts/*
+
+sudo: required
+
+services:
+  - docker
+
+matrix:
+  fast_finish: true
+
+stages:
+  - lint-commit
+  - test
+  - build
+
+install:
+  - npm ci
+  - npm run lerna bootstrap
+
+jobs:
+  include:
+    - stage: lint-commit
+      name: "📝 Commit Lint"
+      script:
+        - npx @commitlint/travis-cli
+
+    - stage: test
+
+    # - name: "🔒 Audit Dependencies"
+      script:
+        - npm audit
+        - npm run lerna exec npm audit
+
+    - name: "😇 Unit Tests"
+      script:
+        - npm test
+
+    - stage: build
+      name: "🔨 Build"
+      script:
+        - npm run lerna run build

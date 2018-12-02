@@ -1,0 +1,10 @@
+node_modules
+coverage
+example
+tmp
+
+components/**/commonjs
+components/**/esm
+
+styles/**/commonjs
+styles/**/esm
