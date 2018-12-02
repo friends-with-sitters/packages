@@ -1,6 +1,6 @@
 {
   "name": "@friendswithsitters/styles",
-  "version": "0.0.1-alpha.6",
+  "version": "0.0.1-alpha.7",
   "description": "CSS-in-JS Shareable Styles",
   "engines": {
     "node": ">=8"
