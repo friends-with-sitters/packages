@@ -4,10 +4,6 @@
       "packages": [
         "styles/theme/package.json"
       ]
-    },
-    "components": {
-      "packages": [
-      ]
     }
   }
 }
