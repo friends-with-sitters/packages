@@ -20,7 +20,7 @@ Any contributed code needs to pass linting and tests before it can be considered
 
 1. Push your branch: `git push -u origin your-branch-name`
 
-1. Submit a pull request to the upstream dwp-components repository.
+1. Submit a pull request to the upstream packages repository.
 
 1. Choose a descriptive title and describe your changes briefly.
 
