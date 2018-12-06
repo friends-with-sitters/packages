@@ -12,10 +12,9 @@
     "esm"
   ],
   "scripts": {
-    "build": "npm run build-commonjs && npm run build-esm && npm run size",
+    "build": "npm run build-commonjs && npm run build-esm",
     "build-commonjs": "BABEL_ENV=commonjs babel src --out-dir commonjs --ignore '**/stories','**/test' --config-file ./.buildrc --source-maps inline",
     "build-esm": "BABEL_ENV=esm babel src --out-dir esm --ignore '**/stories','**/test' --config-file ./.buildrc --source-maps inline",
-    "size": "size-limit",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "storybook": "storybook start",
     "storybook:ios": "react-native run-ios",
@@ -61,21 +60,10 @@
     "metro-react-native-babel-preset": "0.50.0",
     "react-dom": "^16.6.1",
     "react-test-renderer": "16.6.1",
-    "size-limit": "^0.21.0",
     "storybook-readme": "^4.0.2",
     "storybook-styled-components": "^1.1.2",
     "styled-components": "^4.0.3"
   },
-  "size-limit": [
-    {
-      "path": "commonjs/index.js",
-      "limit": "100 KB"
-    },
-    {
-      "path": "esm/index.js",
-      "limit": "100 KB"
-    }
-  ],
   "publishConfig": {
     "access": "public"
   }
