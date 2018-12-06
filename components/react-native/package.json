@@ -1,6 +1,6 @@
 {
   "name": "@friendswithsitters/react-native",
-  "version": "0.0.1-alpha.7",
+  "version": "0.0.1-alpha.8",
   "description": "Friendswithsitters React Native Components",
   "engines": {
     "node": ">=8"
@@ -26,7 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.1.5",
-    "@friendswithsitters/styles": "0.0.1-alpha.7",
+    "@friendswithsitters/styles": "^0.0.1-alpha.8",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-native": "^0.57.7"

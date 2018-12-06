@@ -6,24 +6,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## [0.0.1-alpha.8](https://github.com/friends-with-sitters/packages/compare/v0.0.1-alpha.7...v0.0.1-alpha.8) (2018-12-06)
 
 
-### Bug Fixes
-
-* fixing lerna configuration ([eb1d3a0](https://github.com/friends-with-sitters/packages/commit/eb1d3a0))
-
-
 ### Features
 
 * **components/react:** initial commit ([88005ce](https://github.com/friends-with-sitters/packages/commit/88005ce))
 * **components/react-native:** initial commit implementing react-native components framekwork ([9c169e7](https://github.com/friends-with-sitters/packages/commit/9c169e7))
-* **styles/theme:** using d3-color to provide color utility ([cfe9db5](https://github.com/friends-with-sitters/packages/commit/cfe9db5))
-
-
-
-
-
-## 0.0.1-alpha.7 (2018-12-02)
-
-
-### Features
-
-* **styles/theme:** implemented palette in theme ([e3de7c7](https://github.com/friends-with-sitters/packages/commit/e3de7c7))
