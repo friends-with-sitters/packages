@@ -13,22 +13,25 @@
   ],
   "scripts": {
     "build": "npm run build-commonjs && npm run build-esm && npm run size",
-    "build-commonjs": "BABEL_ENV=commonjs babel src --out-dir commonjs --ignore '**/stories','**/test' --source-maps inline",
-    "build-esm": "BABEL_ENV=esm babel src --out-dir esm --ignore '**/stories','**/test' --source-maps inline",
+    "build-commonjs": "BABEL_ENV=commonjs babel src --out-dir commonjs --ignore '**/stories','**/test' --config-file ./.buildrc --source-maps inline",
+    "build-esm": "BABEL_ENV=esm babel src --out-dir esm --ignore '**/stories','**/test' --config-file ./.buildrc --source-maps inline",
     "size": "size-limit",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
     "storybook": "storybook start",
+    "storybook:ios": "react-native run-ios",
+    "storybook:android": "react-native run-android",
     "prepack": "npm run build",
     "test-storybook": "loki"
   },
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.1.5",
+    "@friendswithsitters/styles": "0.0.1-alpha.7",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-native": "^0.57.7"
   },
   "peerDependencies": {
-    "@friendswithsitters/styles": "0.0.1-alpha.5",
     "styled-components": "^4.0.3"
   },
   "devDependencies": {
@@ -55,11 +58,13 @@
     "babel-plugin-add-react-displayname": "^0.0.5",
     "babel-plugin-styled-components": "^1.8.0",
     "babel-runtime": "^6.26.0",
+    "metro-react-native-babel-preset": "0.50.0",
+    "react-dom": "^16.6.1",
+    "react-test-renderer": "16.6.1",
     "size-limit": "^0.21.0",
     "storybook-readme": "^4.0.2",
     "storybook-styled-components": "^1.1.2",
-    "styled-components": "^4.0.3",
-    "react-dom": "^16.6.1"
+    "styled-components": "^4.0.3"
   },
   "size-limit": [
     {
