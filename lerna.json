@@ -1,6 +1,7 @@
 {
   "packages": [
-    "styles/*"
+    "styles/*",
+    "components/*"
   ],
   "command": {
     "publish": {
