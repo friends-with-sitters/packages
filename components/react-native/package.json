@@ -1,0 +1,77 @@
+{
+  "name": "@friendswithsitters/react-native",
+  "version": "0.0.1-alpha.7",
+  "description": "Friendswithsitters React Native Components",
+  "engines": {
+    "node": ">=8"
+  },
+  "main": "commonjs/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "commonjs",
+    "esm"
+  ],
+  "scripts": {
+    "build": "npm run build-commonjs && npm run build-esm && npm run size",
+    "build-commonjs": "BABEL_ENV=commonjs babel src --out-dir commonjs --ignore '**/stories','**/test' --source-maps inline",
+    "build-esm": "BABEL_ENV=esm babel src --out-dir esm --ignore '**/stories','**/test' --source-maps inline",
+    "size": "size-limit",
+    "storybook": "storybook start",
+    "prepack": "npm run build",
+    "test-storybook": "loki"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.1.5",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-native": "^0.57.7"
+  },
+  "peerDependencies": {
+    "@friendswithsitters/styles": "0.0.1-alpha.5",
+    "styled-components": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@friendswithsitters/styles": "^0.0.1-alpha.7",
+    "@storybook/addon-actions": "^4.0.12",
+    "@storybook/addon-info": "^4.0.4",
+    "@storybook/addon-knobs": "^4.0.4",
+    "@storybook/addon-links": "^4.0.12",
+    "@storybook/addons": "^4.0.12",
+    "@storybook/react": "^4.0.4",
+    "@storybook/react-native": "^4.0.12",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-add-react-displayname": "^0.0.5",
+    "babel-plugin-styled-components": "^1.8.0",
+    "babel-runtime": "^6.26.0",
+    "size-limit": "^0.21.0",
+    "storybook-readme": "^4.0.2",
+    "storybook-styled-components": "^1.1.2",
+    "styled-components": "^4.0.3",
+    "react-dom": "^16.6.1"
+  },
+  "size-limit": [
+    {
+      "path": "commonjs/index.js",
+      "limit": "100 KB"
+    },
+    {
+      "path": "esm/index.js",
+      "limit": "100 KB"
+    }
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
