@@ -1,6 +1,6 @@
 {
   "name": "@friendswithsitters/react-native",
-  "version": "0.0.1-alpha.8",
+  "version": "0.0.1-alpha.9",
   "description": "Friendswithsitters React Native Components",
   "engines": {
     "node": ">=8"
