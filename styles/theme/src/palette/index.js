@@ -1,5 +1,7 @@
 export { default as accent } from './accent';
 
+export { default as clear } from './clear';
+
 export { default as negative } from './negative';
 
 export { default as neutral } from './neutral';
