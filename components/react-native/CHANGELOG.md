@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2-alpha.2](https://github.com/friends-with-sitters/packages/compare/v0.0.2-alpha.0...v0.0.2-alpha.2) (2018-12-08)
+
+
+### Features
+
+* implement button, caption, heading and text components ([803b4cf](https://github.com/friends-with-sitters/packages/commit/803b4cf))
+
+
+
+
+
 ## [0.0.2-alpha.1](https://github.com/friends-with-sitters/packages/compare/v0.0.2-alpha.0...v0.0.2-alpha.1) (2018-12-08)
 
 
