@@ -13,7 +13,7 @@ const Text = styled.Text`
   color: ${({ theme, color, hue }) => theme.palette[color][hue]};
   font-weight: 400;
   margin: ${PixelRatio.roundToNearestPixel(5)}px ${PixelRatio.roundToNearestPixel(10)}px;
-  font-size: ${({ theme, variant }) => PixelRatio.roundToNearestPixel(sizes[variant])}px;
+  font-size: ${({ variant }) => PixelRatio.roundToNearestPixel(sizes[variant])}px;
 `;
 
 Text.propTypes = {

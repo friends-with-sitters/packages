@@ -16,11 +16,11 @@ const marginBottom = {
 
 const Heading = styled.Text`
   color: ${({ theme }) => theme.palette.neutral[400]};
-  font-size: ${({ theme, variant }) => PixelRatio.roundToNearestPixel(sizes[variant])}px;
+  font-size: ${({ variant }) => PixelRatio.roundToNearestPixel(sizes[variant])}px;
   margin-top: 0;
   margin-right: 12%;
   margin-left: ${PixelRatio.roundToNearestPixel(10)}px;
-  margin-bottom: ${({ theme, variant }) => PixelRatio.roundToNearestPixel(marginBottom[variant])}px;
+  margin-bottom: ${({ variant }) => PixelRatio.roundToNearestPixel(marginBottom[variant])}px;
 `;
 
 Heading.propTypes = {

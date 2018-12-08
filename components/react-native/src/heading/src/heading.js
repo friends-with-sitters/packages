@@ -12,7 +12,7 @@ const sizes = {
 const Heading = styled.Text`
   color: ${({ theme }) => theme.palette.neutral[700]};
   font-weight: 700;
-  font-size: ${({ theme, variant }) => PixelRatio.roundToNearestPixel(sizes[variant])}px;
+  font-size: ${({ variant }) => PixelRatio.roundToNearestPixel(sizes[variant])}px;
   margin-top: 0;
   margin-right: ${PixelRatio.roundToNearestPixel(10)}px
   margin-left: ${PixelRatio.roundToNearestPixel(10)}px
