@@ -1,22 +1,22 @@
 import styled, { withTheme } from 'styled-components/native';
 import { PixelRatio } from 'react-native';
+import PropTypes from 'prop-types';
 
-const isDisabled = ({ theme, disabled }) => {
-  if (disabled) {
-    return `
-      background-color: ${theme.palette.neutral[200]};
-    `;
-  }
-  return null;
-};
-
-const View = styled.View`
-  align-items: center;
+const Input = styled.TextInput`
   border-radius: ${PixelRatio.roundToNearestPixel(3)}px;
   margin: ${PixelRatio.roundToNearestPixel(20)}px ${PixelRatio.roundToNearestPixel(10)}px;
   padding: ${PixelRatio.roundToNearestPixel(8)}px ${PixelRatio.roundToNearestPixel(10)}px;
-  background-color: ${({ theme, background, hue }) => theme.palette[background][hue]};
-  ${isDisabled}
+  background: ${({ theme, background, hue }) => theme.palette[background][hue]};
 `;
 
-export default withTheme(View);
+Input.propTypes = {
+  background: PropTypes.string,
+  hue: PropTypes.number,
+};
+
+Input.defaultProps = {
+  background: 'neutral',
+  hue: 200,
+};
+
+export default withTheme(Input);

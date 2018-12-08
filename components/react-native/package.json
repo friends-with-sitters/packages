@@ -28,7 +28,8 @@
     "@friendswithsitters/styles": "^0.0.2-alpha.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
-    "react-native": "^0.57.7"
+    "react-native": "^0.57.7",
+    "tinycolor2": "^1.4.1"
   },
   "peerDependencies": {
     "styled-components": "^4.0.3"
