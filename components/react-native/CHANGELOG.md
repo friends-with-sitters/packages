@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2-alpha.3](https://github.com/friends-with-sitters/packages/compare/v0.0.2-alpha.2...v0.0.2-alpha.3) (2018-12-09)
+
+
+### Features
+
+* **components/react-native:** implement avatar, badge, button, caption, divider, heading, input, screen and text ([095a289](https://github.com/friends-with-sitters/packages/commit/095a289))
+
+
+
+
+
 ## [0.0.2-alpha.2](https://github.com/friends-with-sitters/packages/compare/v0.0.2-alpha.0...v0.0.2-alpha.2) (2018-12-08)
 
 
