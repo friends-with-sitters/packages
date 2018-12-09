@@ -1,20 +1,15 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components/native';
+import { ThemeProvider } from 'styled-components/native';
 import { storiesOf } from '@storybook/react-native';
 
 import Theme from '@friendswithsitters/styles';
 
 import { Button } from '..';
+import { Screen } from '../../screen';
 
 const StyleDecorator = storyFn => <ThemeProvider theme={Theme}>{storyFn()}</ThemeProvider>;
 
 const stories = storiesOf('🔘 Buttons', module).addDecorator(StyleDecorator);
-
-const StyledView = styled.View`
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-`;
 
 const types = {
   Negative: 'negative',
@@ -27,7 +22,7 @@ const types = {
 Object.keys(types).forEach(type => {
   const val = types[type];
   stories.add(type, () => (
-    <StyledView>
+    <Screen>
       <Button background={val} hue={200} onPress={() => {}}>
         Close Account
       </Button>
@@ -49,6 +44,14 @@ Object.keys(types).forEach(type => {
       <Button background={val} hue={800} onPress={() => {}}>
         Close Account
       </Button>
-    </StyledView>
+    </Screen>
   ));
 });
+
+stories.add('Clear', () => (
+  <Screen>
+    <Button background="clear" hue={800} onPress={() => {}}>
+      Clear button to another screen
+    </Button>
+  </Screen>
+));

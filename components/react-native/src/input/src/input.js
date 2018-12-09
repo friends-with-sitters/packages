@@ -1,22 +1,55 @@
+import React from 'react';
 import styled, { withTheme } from 'styled-components/native';
 import { PixelRatio } from 'react-native';
 import PropTypes from 'prop-types';
+import tinycolor from 'tinycolor2';
+
+const { roundToNearestPixel: rounded } = PixelRatio;
+
+const constrain = hue => Math.max(200, Math.min(hue, 800));
+
+const readable = (...args) => tinycolor.mostReadable(...args).toString('rgb');
+
+const contrast = ({ theme, color, hue }) => {
+  const {
+    [color]: { [hue]: text, ...hues },
+  } = theme.palette;
+  const contrasts = Object.keys(hues).map(h => hues[h].toString());
+  return readable(text.toString(), contrasts);
+};
 
 const Input = styled.TextInput`
-  border-radius: ${PixelRatio.roundToNearestPixel(3)}px;
-  margin: ${PixelRatio.roundToNearestPixel(20)}px ${PixelRatio.roundToNearestPixel(10)}px;
-  padding: ${PixelRatio.roundToNearestPixel(8)}px ${PixelRatio.roundToNearestPixel(10)}px;
-  background: ${({ theme, background, hue }) => theme.palette[background][hue]};
+  font-weight: 400;
+  color: ${contrast}
+  border-radius: ${rounded(3)}px;
+  font-size: ${({ theme, variant }) => rounded(theme.typography.text[variant])}px;
+  margin: ${({ theme }) => rounded(theme.spacing.units[4])}px 0;
+  padding: ${({ theme }) => rounded(theme.spacing.units[1])}px ${({ theme }) =>
+  rounded(theme.spacing.units[2])}px;
+  background: ${({ theme, color, hue }) => theme.palette[color][hue]};
 `;
 
-Input.propTypes = {
-  background: PropTypes.string,
+const Text = ({ theme, color, hue, ...props }) => (
+  <Input
+    color={color}
+    hue={hue}
+    placeholderTextColor={theme.palette[color][constrain(hue + 300)]}
+    selectionColor={theme.palette[color][constrain(hue + 300)]}
+    underlineColorAndroid={theme.palette.clear[constrain(hue + 200)]}
+    {...props}
+  />
+);
+
+Text.propTypes = {
+  color: PropTypes.string,
   hue: PropTypes.number,
+  variant: PropTypes.string,
 };
 
-Input.defaultProps = {
-  background: 'neutral',
-  hue: 200,
+Text.defaultProps = {
+  color: 'neutral',
+  hue: 300,
+  variant: 'm',
 };
 
-export default withTheme(Input);
+export default withTheme(Text);

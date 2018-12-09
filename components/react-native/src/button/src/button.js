@@ -7,11 +7,11 @@ import View from './view';
 
 const Button = PlatformComponent =>
   withTheme(props => {
-    const { disabled, children, theme, background, hue } = props;
+    const { disabled, children, theme, background, hue, ...controls } = props;
     const underlayColor = theme.palette[background][hue].brighter(4);
     return (
       <PlatformComponent
-        {...props}
+        {...controls}
         activeOpacity={disabled ? 0 : 0.8}
         underlayColor={underlayColor}
       >

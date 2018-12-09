@@ -9,12 +9,16 @@ const contrast = ({ theme, background, hue }) => {
   const {
     [background]: { [hue]: color, ...hues },
   } = theme.palette;
-  const contrasts = Object.keys(hues).map(h => hues[h].toString());
-  return readable(color.toString(), contrasts);
+  if (color.opacity > 0) {
+    const contrasts = Object.keys(hues).map(h => hues[h].toString());
+    const contrasting = readable(color.toString(), contrasts);
+    return `color: ${contrasting.toString()}`;
+  }
+  return null;
 };
 
 const ButtonText = styled(Text)`
-  color: ${contrast};
+  ${contrast};
   margin: 0;
 `;
 

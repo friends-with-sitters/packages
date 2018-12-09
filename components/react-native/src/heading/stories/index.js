@@ -1,40 +1,36 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components/native';
+import { ThemeProvider } from 'styled-components/native';
 import { storiesOf } from '@storybook/react-native';
 
 import Theme from '@friendswithsitters/styles';
 
 import { Heading } from '..';
+import { Screen } from '../../screen';
 
 const StyleDecorator = storyFn => <ThemeProvider theme={Theme}>{storyFn()}</ThemeProvider>;
 
 const stories = storiesOf('🎙 Heading', module).addDecorator(StyleDecorator);
 
-const StyledView = styled.View`
-  flex: 1;
-  flex-direction: column;
-`;
-
 stories.add('Extra Large', () => (
-  <StyledView>
+  <Screen>
     <Heading variant="xl">An Extra Large Heading</Heading>
-  </StyledView>
+  </Screen>
 ));
 
 stories.add('Large', () => (
-  <StyledView>
+  <Screen>
     <Heading variant="l">A Large Heading</Heading>
-  </StyledView>
+  </Screen>
 ));
 
 stories.add('Medium', () => (
-  <StyledView>
+  <Screen>
     <Heading variant="m">A Medium Heading</Heading>
-  </StyledView>
+  </Screen>
 ));
 
 stories.add('Small', () => (
-  <StyledView>
+  <Screen>
     <Heading variant="s">A Small Heading</Heading>
-  </StyledView>
+  </Screen>
 ));

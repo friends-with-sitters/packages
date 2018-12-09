@@ -1,6 +1,8 @@
 import styled, { withTheme } from 'styled-components/native';
 import { PixelRatio } from 'react-native';
 
+const { roundToNearestPixel: rounded } = PixelRatio;
+
 const isDisabled = ({ theme, disabled }) => {
   if (disabled) {
     return `
@@ -12,9 +14,10 @@ const isDisabled = ({ theme, disabled }) => {
 
 const View = styled.View`
   align-items: center;
-  border-radius: ${PixelRatio.roundToNearestPixel(3)}px;
-  margin: ${PixelRatio.roundToNearestPixel(20)}px ${PixelRatio.roundToNearestPixel(10)}px;
-  padding: ${PixelRatio.roundToNearestPixel(8)}px ${PixelRatio.roundToNearestPixel(10)}px;
+  margin: ${({ theme }) => rounded(theme.spacing.units[3])}px 0;
+  padding: ${({ theme }) => rounded(theme.spacing.units[2])}px
+    ${({ theme }) => rounded(theme.spacing.units[2])}px;
+  border-radius: ${rounded(3)}px;
   background-color: ${({ theme, background, hue }) => theme.palette[background][hue]};
   ${isDisabled}
 `;

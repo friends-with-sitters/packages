@@ -1,23 +1,19 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components/native';
+import { ThemeProvider } from 'styled-components/native';
 import { storiesOf } from '@storybook/react-native';
 
 import Theme from '@friendswithsitters/styles';
 
 import { Text } from '..';
 import { Heading } from '../../heading';
+import { Screen } from '../../screen';
 
 const StyleDecorator = storyFn => <ThemeProvider theme={Theme}>{storyFn()}</ThemeProvider>;
 
 const stories = storiesOf('📓 Text', module).addDecorator(StyleDecorator);
 
-const StyledView = styled.View`
-  flex: 1;
-  flex-direction: column;
-`;
-
 stories.add('Colors', () => (
-  <StyledView>
+  <Screen>
     <Text color="accent" hue={600} variant="l">
       This is some text for the screen
     </Text>
@@ -33,40 +29,40 @@ stories.add('Colors', () => (
     <Text color="primary" hue={600} variant="l">
       This is some text for the screen
     </Text>
-  </StyledView>
+  </Screen>
 ));
 
 stories.add('Lightened Hue', () => (
-  <StyledView>
+  <Screen>
     <Text color="negative" hue={300} variant="l">
       This is some text for the screen
     </Text>
-  </StyledView>
+  </Screen>
 ));
 
 stories.add('Large', () => (
-  <StyledView>
+  <Screen>
     <Heading variant="l">Some Title</Heading>
     <Text variant="l">This is some text for the screen</Text>
-  </StyledView>
+  </Screen>
 ));
 
 stories.add('Medium', () => (
-  <StyledView>
+  <Screen>
     <Heading variant="m">Some Title</Heading>
     <Text variant="m">This is some text for the screen</Text>
-  </StyledView>
+  </Screen>
 ));
 
 stories.add('Small', () => (
-  <StyledView>
+  <Screen>
     <Heading variant="s">Some Title</Heading>
     <Text variant="s">This is some text for the screen</Text>
-  </StyledView>
+  </Screen>
 ));
 
 stories.add('Extra Small', () => (
-  <StyledView>
+  <Screen>
     <Text variant="xs">This is some text for the screen</Text>
-  </StyledView>
+  </Screen>
 ));

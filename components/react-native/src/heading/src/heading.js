@@ -2,21 +2,22 @@ import styled, { withTheme } from 'styled-components/native';
 import { PixelRatio } from 'react-native';
 import PropTypes from 'prop-types';
 
-const sizes = {
-  xl: 48,
-  l: 36,
-  m: 24,
-  s: 19,
+const { roundToNearestPixel: rounded } = PixelRatio;
+
+const marginUnitMappings = {
+  xl: 6,
+  l: 4,
+  m: 3,
+  s: 1,
 };
 
 const Heading = styled.Text`
   color: ${({ theme }) => theme.palette.neutral[700]};
   font-weight: 700;
-  font-size: ${({ variant }) => PixelRatio.roundToNearestPixel(sizes[variant])}px;
+  font-size: ${({ theme, variant }) => rounded(theme.typography.headings[variant])}px;
   margin-top: 0;
-  margin-right: ${PixelRatio.roundToNearestPixel(10)}px
-  margin-left: ${PixelRatio.roundToNearestPixel(10)}px
-  margin-bottom: ${PixelRatio.roundToNearestPixel(30)}px;
+  margin-bottom: ${({ theme, variant }) =>
+    rounded(theme.spacing.units[marginUnitMappings[variant]])}px;
 `;
 
 Heading.propTypes = {

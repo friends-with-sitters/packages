@@ -2,18 +2,13 @@ import styled, { withTheme } from 'styled-components/native';
 import { PixelRatio } from 'react-native';
 import PropTypes from 'prop-types';
 
-const sizes = {
-  l: 24,
-  m: 19,
-  s: 16,
-  xs: 14,
-};
+const { roundToNearestPixel: rounded } = PixelRatio;
 
 const Text = styled.Text`
   color: ${({ theme, color, hue }) => theme.palette[color][hue]};
   font-weight: 400;
-  margin: ${PixelRatio.roundToNearestPixel(5)}px ${PixelRatio.roundToNearestPixel(10)}px;
-  font-size: ${({ variant }) => PixelRatio.roundToNearestPixel(sizes[variant])}px;
+  margin: ${({ theme }) => rounded(theme.spacing.units[1])}px 0;
+  font-size: ${({ theme, variant }) => rounded(theme.typography.text[variant])}px;
 `;
 
 Text.propTypes = {
@@ -24,8 +19,8 @@ Text.propTypes = {
 
 Text.defaultProps = {
   color: 'neutral',
-  hue: 600,
   variant: 'm',
+  hue: 600,
 };
 
 export default withTheme(Text);
