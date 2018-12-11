@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2-alpha.4](https://github.com/friends-with-sitters/packages/compare/v0.0.2-alpha.3...v0.0.2-alpha.4) (2018-12-11)
+
+
+### Bug Fixes
+
+* using react-native as a peer dependency ([9a16e91](https://github.com/friends-with-sitters/packages/commit/9a16e91))
+
+
+
+
+
 ## [0.0.2-alpha.3](https://github.com/friends-with-sitters/packages/compare/v0.0.2-alpha.2...v0.0.2-alpha.3) (2018-12-09)
 
 
