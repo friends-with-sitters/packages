@@ -26,12 +26,12 @@
   "dependencies": {
     "@babel/runtime": "^7.1.5",
     "@friendswithsitters/styles": "^0.0.2-alpha.2",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.1",
-    "react-native": "^0.57.7",
     "tinycolor2": "^1.4.1"
   },
   "peerDependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-native": "^0.57.7",
     "styled-components": "^4.0.3"
   },
   "devDependencies": {
@@ -59,7 +59,10 @@
     "babel-plugin-styled-components": "^1.8.0",
     "babel-runtime": "^6.26.0",
     "metro-react-native-babel-preset": "0.50.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
     "react-dom": "^16.6.1",
+    "react-native": "^0.57.7",
     "react-test-renderer": "16.6.1",
     "storybook-readme": "^4.0.2",
     "storybook-styled-components": "^1.1.2",
