@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2-alpha.5](https://github.com/friends-with-sitters/packages/compare/v0.0.2-alpha.4...v0.0.2-alpha.5) (2019-01-04)
+
+
+### Features
+
+* **styles/theme:** implemented typography spacings and custom fonts ([b59ebbd](https://github.com/friends-with-sitters/packages/commit/b59ebbd))
+
+
+
+
+
 ## [0.0.2-alpha.4](https://github.com/friends-with-sitters/packages/compare/v0.0.2-alpha.3...v0.0.2-alpha.4) (2018-12-11)
 
 

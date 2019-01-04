@@ -4,14 +4,10 @@ import PropTypes from 'prop-types';
 
 const { roundToNearestPixel: rounded } = PixelRatio;
 
-const constrain = (palette, hue) => (
+const constrain = (palette, hue) =>
   palette[
-    Math.max(
-      Math.min(...Object.keys(palette)), 
-      Math.min(hue, Math.max(...Object.keys(palette)))
-    )
-  ]
-);
+    Math.max(Math.min(...Object.keys(palette)), Math.min(hue, Math.max(...Object.keys(palette))))
+  ];
 
 const fontFamily = ({ theme, weight }) => {
   const { font } = theme.typography;
@@ -19,7 +15,7 @@ const fontFamily = ({ theme, weight }) => {
     return null;
   }
   return `font-family: ${font[weight]}`;
-}
+};
 
 const Text = styled.Text`
   text-align: ${({ align }) => align};

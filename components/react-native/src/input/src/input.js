@@ -44,6 +44,7 @@ const Component = ({ theme, color, hue, ...props }) => (
 );
 
 Component.propTypes = {
+  theme: PropTypes.shape.isRequired,
   hue: PropTypes.number,
   color: PropTypes.string,
 };
