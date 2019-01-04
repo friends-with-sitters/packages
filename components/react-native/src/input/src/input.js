@@ -4,6 +4,8 @@ import { PixelRatio } from 'react-native';
 import PropTypes from 'prop-types';
 import tinycolor from 'tinycolor2';
 
+import { Text } from '../../text';
+
 const { roundToNearestPixel: rounded } = PixelRatio;
 
 const constrain = hue => Math.max(200, Math.min(hue, 800));
@@ -18,19 +20,20 @@ const contrast = ({ theme, color, hue }) => {
   return readable(text.toString(), contrasts);
 };
 
-const Input = styled.TextInput`
+const Input = styled(Text)`
   font-weight: 400;
   color: ${contrast}
   border-radius: ${rounded(3)}px;
   font-size: ${({ theme, variant }) => rounded(theme.typography.text[variant])}px;
   margin: ${({ theme }) => rounded(theme.spacing.units[4])}px 0;
-  padding: ${({ theme }) => rounded(theme.spacing.units[1])}px ${({ theme }) =>
+  padding: ${({ theme }) => rounded(theme.spacing.units[2])}px ${({ theme }) =>
   rounded(theme.spacing.units[2])}px;
   background: ${({ theme, color, hue }) => theme.palette[color][hue]};
 `;
 
-const Text = ({ theme, color, hue, ...props }) => (
+const Component = ({ theme, color, hue, ...props }) => (
   <Input
+    as="TextInput"
     color={color}
     hue={hue}
     placeholderTextColor={theme.palette[color][constrain(hue + 300)]}
@@ -40,16 +43,14 @@ const Text = ({ theme, color, hue, ...props }) => (
   />
 );
 
-Text.propTypes = {
-  color: PropTypes.string,
+Component.propTypes = {
   hue: PropTypes.number,
-  variant: PropTypes.string,
+  color: PropTypes.string,
 };
 
-Text.defaultProps = {
-  color: 'neutral',
+Component.defaultProps = {
   hue: 300,
-  variant: 'm',
+  color: 'neutral',
 };
 
-export default withTheme(Text);
+export default withTheme(Component);
