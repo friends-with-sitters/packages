@@ -7,6 +7,25 @@ describe('Spacing', () => {
     expect(Spacing).toEqual(
       expect.objectContaining({
         gutter: expectedNumber,
+        typography: expect.objectContaining({
+          captions: expect.objectContaining({
+            xl: expectedNumber,
+            l: expectedNumber,
+            m: expectedNumber,
+          }),
+          headings: expect.objectContaining({
+            xl: expectedNumber,
+            l: expectedNumber,
+            m: expectedNumber,
+            s: expectedNumber,
+          }),
+          text: expect.objectContaining({
+            l: expectedNumber,
+            m: expectedNumber,
+            s: expectedNumber,
+            xs: expectedNumber,
+          }),
+        }),
         units: expect.objectContaining({
           0: expectedNumber,
           1: expectedNumber,
