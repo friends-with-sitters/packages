@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components/native';
+import { ThemeProvider } from 'styled-components/native';
 import { storiesOf } from '@storybook/react-native';
 
 import Theme from '@friendswithsitters/styles';
@@ -11,12 +11,8 @@ const StyleDecorator = storyFn => <ThemeProvider theme={Theme}>{storyFn()}</Them
 
 const stories = storiesOf('🎫 Badge', module).addDecorator(StyleDecorator);
 
-const PackedScreen = styled(Screen)`
-  align-items: flex-start;
-`;
-
 stories.add('Normal Badge', () => (
-  <PackedScreen>
+  <Screen>
     <Badge variant="xs">2</Badge>
-  </PackedScreen>
+  </Screen>
 ));

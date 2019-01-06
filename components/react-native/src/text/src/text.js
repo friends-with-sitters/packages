@@ -19,8 +19,8 @@ const fontFamily = ({ theme, weight }) => {
 
 const Text = styled.Text`
   text-align: ${({ align }) => align};
-  color: ${({ theme, color, hue }) => constrain(theme.palette[color], hue)}
-  margin: ${({ theme, variant, type }) => rounded(theme.spacing.typography[type][variant])}px 0;
+  color: ${({ theme, color, hue }) => constrain(theme.palette[color], hue)};
+  margin: ${({ theme, variant, type }) => rounded(theme.spacing.units[theme.spacing.typography[type][variant]])}px 0;
   font-size: ${({ theme, variant, type }) => rounded(theme.typography[type][variant])}px;
   ${fontFamily};
 `;

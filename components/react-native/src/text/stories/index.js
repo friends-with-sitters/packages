@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components/native';
+import styled, { ThemeProvider } from 'styled-components/native';
 import { storiesOf } from '@storybook/react-native';
 
 import Theme from '@friendswithsitters/styles';
