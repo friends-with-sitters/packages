@@ -1,6 +1,6 @@
 {
   "name": "@friendswithsitters/react-native",
-  "version": "0.0.2-alpha.6",
+  "version": "0.0.2-alpha.7",
   "description": "Friendswithsitters React Native Components",
   "engines": {
     "node": ">=8"
@@ -61,8 +61,8 @@
     "metro-react-native-babel-preset": "0.51.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
     "react-devtools-core": "3.5.1",
+    "react-dom": "^16.7.0",
     "react-native": "^0.57.8",
     "react-test-renderer": "16.7.0",
     "storybook-readme": "^4.0.2",

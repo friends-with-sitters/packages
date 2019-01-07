@@ -6,8 +6,8 @@ const { roundToNearestPixel: rounded } = PixelRatio;
 
 const Screen = styled.View`
   flex: ${({ flex }) => flex};
-  margin: ${({ theme }) => rounded(theme.spacing.gutter)}px;  
-  flex-direction: ${({ axis }) => axis === 'vertical' ? 'column' : 'row'};
+  margin: ${({ theme }) => rounded(theme.spacing.gutter)}px;
+  flex-direction: ${({ axis }) => (axis === 'vertical' ? 'column' : 'row')};
   justify-content: ${({ halign }) => halign};
   align-items: ${({ valign }) => valign};
 `;

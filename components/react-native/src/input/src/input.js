@@ -38,7 +38,7 @@ const Input = styled.TextInput`
   ${fontFamily};
 `;
 
-const TextInput = (props) => {
+const TextInput = props => {
   const { theme, color, hue } = props;
   return (
     <Input
@@ -51,6 +51,7 @@ const TextInput = (props) => {
 };
 
 TextInput.propTypes = {
+  theme: PropTypes.shape.isRequired,
   color: PropTypes.string,
   hue: PropTypes.number,
   weight: PropTypes.string,
