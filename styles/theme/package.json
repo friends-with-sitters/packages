@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.2.0",
-    "d3-color": "^1.2.3",
+    "d3-color": "^3.0.0",
     "tagged-template-literals": "^1.0.1"
   },
   "publishConfig": {
